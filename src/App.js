@@ -8,25 +8,23 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentX: 0,
-      currentY: 0,
-      nextX: 0,
-      nextY: 0,
+      x: 0,
+      y: 0,
       history: []
     };
   }
-  componentDidUpdate(){
-    if(this.state.currentX !== this.state.nextX){
-      let A = this.state.currentX;
-      let B = this.state.nextX;
-      for (A; A<=B;A++){
-      this.setState({currentX: A})
-      // console.log(A)
-      }
-    }
-}
+//   componentDidUpdate(){
+//     if(this.state.currentX !== this.state.nextX){
+//       let A = this.state.currentX;
+//       let B = this.state.nextX;
+//       for (A; A<=B;A++){
+//       this.setState({currentX: A})
+//       // console.log(A)
+//       }
+//     }
+// }
   setCoordinates = ( x, y ) => {
-    this.setState({ nextX: x, nextY: y, history: [...this.state.history, { x, y }] });
+    this.setState({x, y, history: [...this.state.history, { x, y }] });
     // console.log(this.state);
   };
 
@@ -35,7 +33,7 @@ export default class App extends Component {
     return (
       <div className="App">
         <Control setCoordinates={this.setCoordinates} />
-        <Area x={this.state.currentX} y={this.state.currentY} />
+        <Area x={this.state.x} y={this.state.y} />
         <History history={this.state.history} />
       </div>
     );
