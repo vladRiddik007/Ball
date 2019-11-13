@@ -1,0 +1,9 @@
+.history {
+    font-size: 2rem;
+    color: aqua;
+}
+
+.history li{
+    font-size: 1.2rem;
+    color: rgb(238, 255, 0);
+}

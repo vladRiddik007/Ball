@@ -1,0 +1,10 @@
+.App {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+  background: url(futbol.jpg) no-repeat center top / cover;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
